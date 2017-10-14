@@ -1,0 +1,7 @@
+com/ipn/buenapo/ClienteDTO.class
+com/ipn/buenapo/Controller/ClienteController.class
+com/ipn/buanapo/dao/Conexion.class
+com/ipn/buanapo/dao/ClienteDAO.class
+com/ipn/buenapo/service/implement/ClienteServiceImpl.class
+com/ipn/buanapo/dao/impl/ClienteDAOImpl.class
+com/ipn/buenapo/service/ClienteService.class

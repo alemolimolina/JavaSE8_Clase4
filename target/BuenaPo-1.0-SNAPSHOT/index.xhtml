@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Registro de cliente</h1>
+        <h:form>
+            <p:panelGrid columns="2">
+                <p:outputLabel value="Codigo de cliente"/>
+                <p:inputText value="#{clienteController.cliente.id}"/>
+                <p:outputLabel value="Nombre"/>
+                <p:inputText value="#{clienteController.cliente.nombre}"/>
+                <p:outputLabel value="Apellido"/>
+                <p:inputText value="#{clienteController.cliente.apellido}"/>
+                <p:outputLabel value="Pais"/>
+                <p:inputText value="#{clienteController.cliente.pais}"/>
+                <p:outputLabel value="Sexo"/>
+                <p:selectOneMenu value="#{clienteController.cliente.sexo}">
+                    <f:selectItem itemLabel="hombre" itemValue="h"/>
+                    <f:selectItem itemLabel="mujer" itemValue="m"/>         
+                </p:selectOneMenu>
+
+                <p:outputLabel for="button" value="Fecha de nacimiento:" />
+                <p:calendar id="button" value="#{clienteController.cliente.fechaNacimiento}"  showOn="button" />
+
+                <p:commandButton value="guardar" actionListener="#{clienteController.guardarCliente}"/>
+
+
+
+            </p:panelGrid>
+        </h:form>
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+    </h:body>
+</html>
+
+
+
+                
+        
